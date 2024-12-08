@@ -20,7 +20,7 @@ contract lottery
     }
     function random() public view returns(uint)
     {
-        return uint(keccak256(abi.encodePacked(block.difficulty,block.timestamp,participants.length))); //random function
+        return uint(keccak256(abi.encodePacked(block.prevrandao,block.timestamp,participants.length))); //random function
     } 
     function selectWinner() public
     
